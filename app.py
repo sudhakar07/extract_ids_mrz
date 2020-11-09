@@ -14,7 +14,8 @@ import os
 
 from passporteye import read_mrz
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 activities = ["Extract Ids","About"]	
 choice = st.sidebar.selectbox("Select Activities",activities)

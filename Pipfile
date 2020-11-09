@@ -13,7 +13,6 @@ numpy = "*"
 streamlit = "*"
 matplotlib = "*"
 seaborn = "*"
-opencv-python = "*"
 
 [requires]
 python_version = "3.7"

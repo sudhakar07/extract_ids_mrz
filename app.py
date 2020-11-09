@@ -14,9 +14,9 @@ import os
 
 from passporteye import read_mrz
 import pytesseract
-#pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
 #pytesseract.pytesseract.tesseract_cmd = "Tesseract-OCR/tesseract.exe"
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+#pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 #pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 #pytesseract.pytesseract.tesseract_cmd = r"/usr/local/Tesseract-OCR/tesseract.exe"
 #pytesseract.pytesseract.tesseract_cmd = r"https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20200328.exe"

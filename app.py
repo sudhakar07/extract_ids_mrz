@@ -40,8 +40,10 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
+	data = st.file_uploader("Upload a Ids", type=["png", "jpg"])
 	
-	mrz = read_mrz("images/7.jpg")
+	#mrz = read_mrz("images/7.jpg")
+	mrz = read_mrz(data)
 
 	if mrz is None:
 		print("Can not read image")

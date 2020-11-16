@@ -10,6 +10,7 @@ matplotlib.use("Agg")
 import seaborn as sns 
 import streamlit as st 
 import os
+from PIL import Image
 
 
 from passporteye import read_mrz
@@ -40,10 +41,12 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
-	data = st.file_uploader("Upload a Ids", type=["png", "jpg"])
+	img_file_buffer = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
+	image = Image.open(img_file_buffer)
+	#data = st.file_uploader("Upload a Ids", type=["png", "jpg"])
 	
 	#mrz = read_mrz("images/7.jpg")
-	mrz = read_mrz(data)
+	mrz = read_mrz(image)
 
 	if mrz is None:
 		print("Can not read image")

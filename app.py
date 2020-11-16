@@ -43,9 +43,10 @@ FILE_TYPES = ["csv", "py", "png", "jpg"]
 
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
-	data = st.file_uploader("Upload a Travel Id (images only)", type=FILE_TYPES)
+	upload = st.file_uploader("Upload a Travel Id (images only)", type=FILE_TYPES)
 	show_file = st.empty()
-	
+	#imgs = np.array(Image.open(data))
+	data = upload.read()
 	show_file.image(data)
 	#show_file.image(img_file_buffer)
 	#image = Image.open(img_file_buffer)

@@ -39,17 +39,24 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+FILE_TYPES = ["csv", "py", "png", "jpg"]
+
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
-	img_file_buffer = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
-	image = Image.open(img_file_buffer)
+	data = st.file_uploader("Upload a Travel Id (images only)", type=FILE_TYPES)
+	show_file = st.empty()
+	
+	show_file.image(data)
+	#show_file.image(img_file_buffer)
+	#image = Image.open(img_file_buffer)
 	#data = st.file_uploader("Upload a Ids", type=["png", "jpg"])
 	
+	
 	#mrz = read_mrz("images/7.jpg")
-	mrz = read_mrz(image)
+	mrz = read_mrz(data)
 
 	if mrz is None:
-		print("Can not read image")
+		show_file.info("Can not read image")
 
 
 	# Obtain image

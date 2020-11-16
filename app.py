@@ -11,7 +11,7 @@ import seaborn as sns
 import streamlit as st 
 import os
 from PIL import Image
-
+from passporteye.mrz.image import MRZPipeline
 
 from passporteye import read_mrz
 import pytesseract
@@ -41,6 +41,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 FILE_TYPES = ["csv", "py", "png", "jpg"]
 
+st.subheader("This App for recognizing machine readable zones (MRZ) from scanned identification documents. in around 90% of the cases, whenever there is a clearly visible MRZ on a page, the system will recognize it and extract the text to the best of the abilities of the underlying OCR engine. \n 10% failed examples seem to be most often either clearly badly scanned documents")
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
 	upload = st.file_uploader("Upload a Travel Id (images only)", type=FILE_TYPES)
@@ -54,17 +55,30 @@ if choice == 'Extract Ids':
 	
 	
 	#mrz = read_mrz("images/7.jpg")
-	mrz = read_mrz(data)
-
+	mrz = read_mrz(data, save_roi=True)
+	st.subheader("Machine-Readable Zone(MRZ) Image")
+	imgs = np.array(mrz.aux['roi'])
+	st.image(imgs)
+	st.subheader("Machine-Readable Zone(MRZ) Text")
+	st.write(mrz.aux['text'])
 	if mrz is None:
 		show_file.info("Can not read image")
 
 
 	# Obtain image
 	mrz_data = mrz.to_dict()
+	st.subheader("KYC instantly")
 	st.write(mrz_data)
-	#st.write(mrz_data.get('sex'))
+	#st.write(mrz.aux['roi'])
+	
+	st.write(MRZPipeline(data).result)
+	#st.write(mrz.aux)
 
 
 elif choice == 'About':
+	#st.subheader("About")
+	
 	st.subheader("About")
+	st.success("Connecting ML&AI Workstation With Sudhakar")
+	st.info("Sudhakar Govindaraj")
+	st.info("sudhakargk74@gmail.com")

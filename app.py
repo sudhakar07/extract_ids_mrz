@@ -15,14 +15,14 @@ from passporteye.mrz.image import MRZPipeline
 
 from passporteye import read_mrz
 import pytesseract
-import streamlit.components.v1 as components
+
 
 #https://github.com/rohankokkula/TEATH
 #https://www.doubango.org/SDKs/mrz/docs/Data_validation.html
 #https://discuss.streamlit.io/t/i-get-an-error-everytime-i-change-anything-in-my-code/4706
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
-#pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sudhakar\AppData\Local\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 #pytesseract.pytesseract.tesseract_cmd = "Tesseract-OCR/tesseract.exe"
 #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 #pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -45,8 +45,18 @@ FILE_TYPES = ["csv", "py", "png", "jpg"]
 
 st.subheader("This App for recognizing machine readable zones (MRZ) from scanned identification documents. in around 90% of the cases, whenever there is a clearly visible MRZ on a page, it will recognize it and extract the text to the best of the abilities of the underlying OCR engine.so one of the easiest methods is to recognize it from an image file. \n 10% failed examples seem to be most often either clearly badly scanned documents. \n ")
 if choice == 'Home':
+	st.subheader("TD1 Format")
+	st.image("images/td1_image.jpg",width=500, height=600)
+	st.image("images/td1_format.jpg",width=500, height=600)
 	
-	components.iframe("http://localhost:8503/iframe_info/MRZ_formats_info.html", width= 800, height=800, scrolling=True)
+	st.subheader("TD2 Format")
+	st.image("images/td2_image.jpg",width=500, height=600)
+	st.image("images/td2_format.jpg",width=500, height=600)
+	
+	st.subheader("TD3 Format")
+	st.image("images/td3_image.jpg",width=500, height=600)
+	st.image("images/td3_format.jpg",width=500, height=600)
+	
 if choice == 'Extract Ids':
 	st.subheader("Extract Ids")
 	upload = st.file_uploader("Upload a Travel Id (images only)", type=FILE_TYPES)
@@ -80,6 +90,10 @@ if choice == 'Extract Ids':
 		
 		st.write(MRZPipeline(data).result)
 		#st.write(mrz.aux)
+		st.subheader("\n \n")
+		btn = st.button("Click Me #HappyLearning.")
+		if btn:
+			st.balloons()
 
 
 elif choice == 'About':

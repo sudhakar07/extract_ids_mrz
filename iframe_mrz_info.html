@@ -1,0 +1,120 @@
+<div class="section" id="mrz-formats">
+<span id="mrzformats"></span><h1>MRZ formats<a class="headerlink" href="#mrz-formats" title="Permalink to this headline">¶</a></h1>
+<p>MRZ / MRTD (Machine Readable Zone / Travel Documents) format is standardized by the <a class="reference external" href="https://en.wikipedia.org/wiki/ICAO">ICAO (International Organization for Standardization)</a> in Document 9303. The document is divided in 7 parts:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p1_cons_en.pdf">Machine Readable Travel Documents Part 1: Introduction</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p2_cons_en.pdf">Machine Readable Travel Documents Part 2: Specifications for the Security of the Design, Manufacture, and Issuance of MRTDs</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf">Machine Readable Travel Documents Part 3: Specifications Common to all MRTDs</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p4_cons_en.pdf">Machine Readable Travel Documents Part 4: Specifications for Machine Readable Passports (MRPs) and other TD3 Size MRTDs</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf">Machine Readable Travel Documents Part 5: Specifications for TD1 Size Machine Readable Official Travel Documents (MROTDs)</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p6_cons_en.pdf">Machine Readable Travel Documents Part 6: Specifications for TD2 Size Machine Readable Official Travel Documents (MROTDs)</a></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p><a class="reference external" href="https://www.icao.int/publications/Documents/9303_p7_cons_en.pdf">Machine Readable Travel Documents Part 7: Machine Readable Visas</a></p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<p>Fortunately you don’t need to read all these documents to understand the MRZ / MRTD format our use our SDK. We have done the work for you.</p>
+<p>There are 3 main formats: <a class="reference internal" href="#td1">TD1</a>, <a class="reference internal" href="#td2">TD2</a>, <a class="reference internal" href="#td3">TD3</a> and Visas (<a class="reference internal" href="#mrva">MRVA</a> and <a class="reference internal" href="#mrvb">MRVB</a>).</p>
+<div class="section" id="td1">
+<h2>TD1<a class="headerlink" href="#td1" title="Permalink to this headline">¶</a></h2>
+<p>This format is defined in <a class="reference external" href="https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf">Machine Readable Travel Documents Part 5: Specifications for TD1 Size Machine Readable Official Travel Documents (MROTDs)</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD1 sample" src="_images/td1_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD1 format" src="_images/td1_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="td2">
+<h2>TD2<a class="headerlink" href="#td2" title="Permalink to this headline">¶</a></h2>
+<p>This format is defined in <a class="reference external" href="https://www.icao.int/publications/Documents/9303_p6_cons_en.pdf">Machine Readable Travel Documents Part 6: Specifications for TD2 Size Machine Readable Official Travel Documents (MROTDs)</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD2 sample" src="_images/td2_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD2 format" src="_images/td2_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="td3">
+<h2>TD3<a class="headerlink" href="#td3" title="Permalink to this headline">¶</a></h2>
+<p>This format is defined in <a class="reference external" href="https://www.icao.int/publications/Documents/9303_p4_cons_en.pdf">Machine Readable Travel Documents Part 4: Specifications for Machine Readable Passports (MRPs) and other TD3 Size MRTDs</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD3 sample" src="_images/td3_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD3 format" src="_images/td3_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="visas">
+<h2>Visas<a class="headerlink" href="#visas" title="Permalink to this headline">¶</a></h2>
+<p>This format is defined in <a class="reference external" href="https://www.icao.int/publications/Documents/9303_p7_cons_en.pdf">Machine Readable Travel Documents Part 7: Machine Readable Visas</a> document and have two subtypes: <a class="reference internal" href="#mrva">MRVA</a> and  <a class="reference internal" href="#mrvb">MRVB</a>.</p>
+<div class="section" id="mrva">
+<h3>MRVA<a class="headerlink" href="#mrva" title="Permalink to this headline">¶</a></h3>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVA sample" src="_images/mrva_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVA format" src="_images/mrva_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="mrvb">
+<h3>MRVB<a class="headerlink" href="#mrvb" title="Permalink to this headline">¶</a></h3>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVB sample" src="_images/mrvb_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVB format" src="_images/mrvb_format.jpg">
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>

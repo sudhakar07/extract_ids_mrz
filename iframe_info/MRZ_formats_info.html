@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html# -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MRZ formats — ultimateMRZ 2.5.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script async="" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/analytics.js.download"></script><script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/modernizr.min.js.download"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/documentation_options.js.download"></script>
+        <script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/jquery.js.download"></script>
+        <script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/underscore.js.download"></script>
+        <script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/doctools.js.download"></script>
+        <script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/language_data.js.download"></script>
+    
+    <script type="text/javascript" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/theme.js.download"></script>
+
+    
+
+  
+  <link rel="stylesheet" href=""./MRZ formats — ultimateMRZ 2.5.2 documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href=""./MRZ formats — ultimateMRZ 2.5.2 documentation_files/pygments.css" type="text/css">
+  <link rel="stylesheet" href=""./MRZ formats — ultimateMRZ 2.5.2 documentation_files/custom.css" type="text/css">
+    <link rel="index" title="Index" href=""https://www.doubango.org/SDKs/mrz/docs/genindex.html">
+    <link rel="search" title="Search" href=""https://www.doubango.org/SDKs/mrz/docs/search.html">
+    <link rel="next" title="MRZ parser" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_parser.html">
+    <link rel="prev" title="Detection techniques" href=""https://www.doubango.org/SDKs/mrz/docs/Detection_techniques.html"> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+   
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=""https://www.doubango.org/SDKs/mrz/docs/index.html">ultimateMRZ</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  
+</div></blockquote>
+
+<p>There are 3 main formats: <a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td1">TD1</a>, <a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td2">TD2</a>, <a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td3">TD3</a> and Visas (<a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrva">MRVA</a> and <a class="reference internal" href="""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrvb">MRVB</a>).</p>
+<div class="section" id="td1">
+<h2>TD1<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td1" title="Permalink to this headline">*</a></h2>
+<p>This format is defined in <a class="reference external" href=""https://www.icao.int/publications/Documents/9303_p5_cons_en.pdf">Machine Readable Travel Documents Part 5: Specifications for TD1 Size Machine Readable Official Travel Documents (MROTDs)</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD1 sample" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td1_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD1 format" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td1_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="td2">
+<h2>TD2<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td2" title="Permalink to this headline">*</a></h2>
+<p>This format is defined in <a class="reference external" href=""https://www.icao.int/publications/Documents/9303_p6_cons_en.pdf">Machine Readable Travel Documents Part 6: Specifications for TD2 Size Machine Readable Official Travel Documents (MROTDs)</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD2 sample" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td2_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD2 format" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td2_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="td3">
+<h2>TD3<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#td3" title="Permalink to this headline">*</a></h2>
+<p>This format is defined in <a class="reference external" href=""https://www.icao.int/publications/Documents/9303_p4_cons_en.pdf">Machine Readable Travel Documents Part 4: Specifications for Machine Readable Passports (MRPs) and other TD3 Size MRTDs</a> document.</p>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD3 sample" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td3_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="TD3 format" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/td3_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="visas">
+<h2>Visas<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#visas" title="Permalink to this headline">*</a></h2>
+<p>This format is defined in <a class="reference external" href=""https://www.icao.int/publications/Documents/9303_p7_cons_en.pdf">Machine Readable Travel Documents Part 7: Machine Readable Visas</a> document and have two subtypes: <a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrva">MRVA</a> and  <a class="reference internal" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrvb">MRVB</a>.</p>
+<div class="section" id="mrva">
+<h3>MRVA<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrva" title="Permalink to this headline">*</a></h3>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVA sample" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/mrva_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVA format" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/mrva_format.jpg">
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="mrvb">
+<h3>MRVB<a class="headerlink" href=""https://www.doubango.org/SDKs/mrz/docs/MRZ_formats.html#mrvb" title="Permalink to this headline">*</a></h3>
+<p>Here is a sample image:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVB sample" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/mrvb_image.jpg">
+</div>
+</div></blockquote>
+<p>Here is the format:</p>
+<blockquote>
+<div><div class="align-center figure">
+<img alt="MRVB format" src="./MRZ formats — ultimateMRZ 2.5.2 documentation_files/mrvb_format.jpg">
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+
+
+
+       
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+ 
+
+  
+  
+    
+   
+
+
+</body></html>
